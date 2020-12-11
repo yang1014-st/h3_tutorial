@@ -11,6 +11,10 @@ public class ValidateISBNTest {
 		ValidateISBN validator = new ValidateISBN();
 		boolean result = validator.checkISBN(140449116);// the first expample, does not require 0140449116 to be a string
 		assertTrue(result);
+		
+		result = validator.checkISBN(140177396);
+		assertTrue(result);
+		
 	}
 	
 	@Test
@@ -21,5 +25,8 @@ public class ValidateISBNTest {
 		assertFalse(result);
 		
 	}
+	
+
+	
 
 }
