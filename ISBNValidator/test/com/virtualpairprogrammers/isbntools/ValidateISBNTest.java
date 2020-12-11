@@ -50,7 +50,9 @@ public class ValidateISBNTest {
 	@Test
 	public void checkAnInvalidate13DigitISBN() {
 		
-	fail();
+		ValidateISBN validator = new ValidateISBN();
+		boolean result = validator.checkISBN("9781505117001");// the first expample, does not require 0140449116 to be a string
+		assertFalse(result);
 		
 	}
 	
