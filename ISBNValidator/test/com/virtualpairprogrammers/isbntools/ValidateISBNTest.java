@@ -26,6 +26,11 @@ public class ValidateISBNTest {
 		
 	}
 	
+	@Test
+	public void nineDigitISBNAreNotAllowed() {
+		fail();
+	}
+	
 
 	
 
