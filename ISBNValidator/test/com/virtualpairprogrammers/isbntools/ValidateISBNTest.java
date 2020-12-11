@@ -33,6 +33,13 @@ public class ValidateISBNTest {
 		
 	}
 	
+	@Test(expected = NumberFormatException.class)
+	public void HelloworldIsNotAllowed() {
+		fail();
+		
+	}
+	
+	
 
 	
 
