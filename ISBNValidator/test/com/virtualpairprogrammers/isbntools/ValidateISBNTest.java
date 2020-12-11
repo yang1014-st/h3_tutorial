@@ -47,6 +47,13 @@ public class ValidateISBNTest {
 		
 	}
 	
+	@Test
+	public void checkAnInvalidate13DigitISBN() {
+		
+	fail();
+		
+	}
+	
 	@Test(expected = NumberFormatException.class)
 	public void nineDigitISBNAreNotAllowed() {
 		ValidateISBN validator = new ValidateISBN();
