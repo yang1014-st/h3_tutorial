@@ -18,6 +18,13 @@ public class ValidateISBNTest {
 	}
 	
 	@Test
+	public void ISBNNumberEndingInAnXAreValid() {
+		fail();
+		
+	}
+	
+	
+	@Test
 	public void checkAnInvalidISBN() {
 		
 		ValidateISBN validator = new ValidateISBN();
@@ -39,6 +46,10 @@ public class ValidateISBNTest {
 		validator.checkISBN("helloworld");
 		
 	}
+	
+	
+	
+	
 	
 	
 
