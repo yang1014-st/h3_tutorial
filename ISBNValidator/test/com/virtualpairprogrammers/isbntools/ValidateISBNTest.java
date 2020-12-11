@@ -7,7 +7,7 @@ import org.junit.Test;
 public class ValidateISBNTest {
 
 	@Test
-	public void checkAValidateISBN() {
+	public void checkAValidate10DigitISBN() {
 		ValidateISBN validator = new ValidateISBN();
 		boolean result = validator.checkISBN("0140449116");// the first expample, does not require 0140449116 to be a string
 		assertTrue("first value", result);
@@ -17,6 +17,16 @@ public class ValidateISBNTest {
 		
 	}
 	
+	@Test
+	public void checkAValidate13DigitISBN() {
+		ValidateISBN validator = new ValidateISBN();
+		boolean result = validator.checkISBN("9780847862108");
+		assertTrue("first value", result);
+		
+		result = validator.checkISBN("9781505117004");
+		assertTrue("second value", result);
+		
+	}
 	
 	@Test
 	public void ISBNNumberEndingInAnXAreValid() {
@@ -26,16 +36,7 @@ public class ValidateISBNTest {
 		
 	}
 	
-	@Test
-	public void checkAValidate13ISBN() {
-		ValidateISBN validator = new ValidateISBN();
-		boolean result = validator.checkISBN("9780847862108");
-		assertTrue("first value", result);
-		
-		result = validator.checkISBN("9781505117004");
-		assertTrue("second value", result);
-		
-	}
+
 	
 	@Test
 	public void checkAnInvalidISBN() {
