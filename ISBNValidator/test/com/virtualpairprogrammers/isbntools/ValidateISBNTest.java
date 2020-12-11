@@ -9,10 +9,10 @@ public class ValidateISBNTest {
 	@Test
 	public void checkAValidateISBN() {
 		ValidateISBN validator = new ValidateISBN();
-		boolean result = validator.checkISBN(140449116);// the first expample, does not require 0140449116 to be a string
+		boolean result = validator.checkISBN("0140449116");// the first expample, does not require 0140449116 to be a string
 		assertTrue("first value", result);
 		
-		result = validator.checkISBN(140177396);
+		result = validator.checkISBN("0140177396");
 		assertTrue("second value", result);
 		
 	}
@@ -21,7 +21,7 @@ public class ValidateISBNTest {
 	public void checkAnInvalidISBN() {
 		
 		ValidateISBN validator = new ValidateISBN();
-		boolean result = validator.checkISBN(140449117);// the first expample, does not require 0140449116 to be a string
+		boolean result = validator.checkISBN("0140449117");// the first expample, does not require 0140449116 to be a string
 		assertFalse(result);
 		
 	}

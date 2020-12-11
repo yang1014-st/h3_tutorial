@@ -1,14 +1,11 @@
 package com.virtualpairprogrammers.isbntools;
 
 public class ValidateISBN {
-	public static void main(String[] args) {
-	
-	}
 
-	public boolean checkISBN(int isbn) {
+	public boolean checkISBN(String isbn) {
 		// TODO Auto-generated method stub
 		
-		if (isbn == 140449116) {
+		if (isbn == "0140449116") {
 			return true;
 			}
 		else {
