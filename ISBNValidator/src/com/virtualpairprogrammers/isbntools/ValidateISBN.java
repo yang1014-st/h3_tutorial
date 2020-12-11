@@ -20,7 +20,7 @@ public class ValidateISBN {
 					throw new NumberFormatException("ISBN numbes must be numeric");	
 				}	
 			} 
-			else {total += isbn.charAt(i) * (10-i);
+			else {total += Character.getNumericValue(isbn.charAt(i)) * (10-i);
 			}
 		}
 			
