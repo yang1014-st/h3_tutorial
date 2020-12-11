@@ -13,12 +13,14 @@ public class ValidateISBN {
 			
 		}
 		
-		else {
-		if (isbn.length()!=SHORT_ISBN_LENGTH) {throw new NumberFormatException("ISBN numbes must be 10 digits long");	}
-	
-		return isThisAValid1ShortISBN(isbn);
-	}
+		else if (isbn.length()==SHORT_ISBN_LENGTH){
+			return isThisAValid1ShortISBN(isbn);
+
 		}
+		throw new NumberFormatException("ISBN numbes must be 10 digits long");
+	}
+		
+
 
 	private boolean isThisAValid1ShortISBN(String isbn) {
 		int total =0;
