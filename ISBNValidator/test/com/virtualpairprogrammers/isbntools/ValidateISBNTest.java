@@ -8,8 +8,9 @@ public class ValidateISBNTest {
 
 	@Test
 	public void checkValidateISBN() {
-		fail();
-		
+		ValidateISBN validator = new ValidateISBN();
+		boolean result = validator.checkISBN(140449116);// the first expample, does not require 0140449116 to be a string
+		assertTrue(result);
 	}
 
 }
