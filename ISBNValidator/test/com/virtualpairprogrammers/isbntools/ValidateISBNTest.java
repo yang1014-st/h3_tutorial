@@ -35,7 +35,8 @@ public class ValidateISBNTest {
 	
 	@Test(expected = NumberFormatException.class)
 	public void HelloworldIsNotAllowed() {
-		fail();
+		ValidateISBN validator = new ValidateISBN();
+		validator.checkISBN("helloworld");
 		
 	}
 	
