@@ -13,7 +13,7 @@ public class ValidateISBNTest {
 		assertTrue(result);
 	}
 	
-	
+	@Test
 	public void checkAnInvalidISBN() {
 		
 		ValidateISBN validator = new ValidateISBN();
