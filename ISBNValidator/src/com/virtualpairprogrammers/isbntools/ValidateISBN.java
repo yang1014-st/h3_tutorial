@@ -3,14 +3,17 @@ package com.virtualpairprogrammers.isbntools;
 public class ValidateISBN {
 
 	public boolean checkISBN(String isbn) {
-		// TODO Auto-generated method stub
+		int total =0;
 		
-		if (isbn == "0140449116") {
+		for (int i =0; i<10; i++) {
+			total += isbn.charAt(i) * (10-i);
+		}
+		
+		if (total%11==0) {
 			return true;
-			}
+		}
 		else {
 			return false;
-			}
-		
+		}
 	}
 }
