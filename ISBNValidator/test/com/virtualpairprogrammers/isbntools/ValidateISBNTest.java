@@ -29,7 +29,7 @@ public class ValidateISBNTest {
 	}
 	
 	@Test
-	public void ISBNNumberEndingInAnXAreValid() {
+	public void TenDigitISBNNumberEndingInAnXAreValid() {
 		ValidateISBN validator = new ValidateISBN();
 		boolean result = validator.checkISBN("012000030X");
 		assertTrue("first value", result);
@@ -39,7 +39,7 @@ public class ValidateISBNTest {
 
 	
 	@Test
-	public void checkAnInvalidISBN() {
+	public void checkAnInvalidate10DigitISBN() {
 		
 		ValidateISBN validator = new ValidateISBN();
 		boolean result = validator.checkISBN("0140449117");// the first expample, does not require 0140449116 to be a string
@@ -55,7 +55,7 @@ public class ValidateISBNTest {
 	}
 	
 	@Test(expected = NumberFormatException.class)
-	public void nunNumericISBNAreNotAllowed() {
+	public void nonNumericISBNAreNotAllowed() {
 		ValidateISBN validator = new ValidateISBN();
 		validator.checkISBN("helloworld");
 		
