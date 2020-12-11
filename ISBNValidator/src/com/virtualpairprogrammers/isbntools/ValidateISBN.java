@@ -41,12 +41,7 @@ public class ValidateISBN {
 			
 		
 		
-		if (total%SHORT_ISBN_MULTIPLIE==0) {
-			return true;
-		}
-		else {
-			return false;
-		}
+		return (total%SHORT_ISBN_MULTIPLIE==0) ;
 	}
 
 	private boolean isThisAValidLongISBN(String isbn) {
@@ -59,7 +54,6 @@ public class ValidateISBN {
 				total += Character.getNumericValue(isbn.charAt(i))*3;
 			}
 		}
-		if (total%10==0) {return true;}
-		else {return false;}
+		return (total%10==0) ;
 	}
 }
