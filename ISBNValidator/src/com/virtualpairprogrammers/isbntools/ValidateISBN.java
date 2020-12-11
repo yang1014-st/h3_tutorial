@@ -2,7 +2,6 @@ package com.virtualpairprogrammers.isbntools;
 
 public class ValidateISBN {
 
-	private static final int LONG_ISBN_MULTIPLIE = 10;
 	private static final int SHORT_ISBN_MULTIPLIE = 11;
 	private static final int SHORT_ISBN_LENGTH = 10;
 	private static final int LONG_ISBN_LENGTH = 13;
@@ -10,18 +9,18 @@ public class ValidateISBN {
 	public boolean checkISBN(String isbn) {
 		
 		if (isbn.length()==LONG_ISBN_LENGTH) {
-			return isThisAValid13DigitISBN(isbn);
+			return isThisAValidLongISBN(isbn);
 			
 		}
 		
 		else {
 		if (isbn.length()!=SHORT_ISBN_LENGTH) {throw new NumberFormatException("ISBN numbes must be 10 digits long");	}
 	
-		return isThisAValid10DigitISBN(isbn);
+		return isThisAValid1ShortISBN(isbn);
 	}
 		}
 
-	private boolean isThisAValid10DigitISBN(String isbn) {
+	private boolean isThisAValid1ShortISBN(String isbn) {
 		int total =0;
 		
 		for (int i =0; i<SHORT_ISBN_LENGTH; i++) 
@@ -50,7 +49,7 @@ public class ValidateISBN {
 		}
 	}
 
-	private boolean isThisAValid13DigitISBN(String isbn) {
+	private boolean isThisAValidLongISBN(String isbn) {
 		int total = 0;
 		for (int i =0; i<LONG_ISBN_LENGTH; i++) {
 			if(i%2==0) {
@@ -60,7 +59,7 @@ public class ValidateISBN {
 				total += Character.getNumericValue(isbn.charAt(i))*3;
 			}
 		}
-		if (total%LONG_ISBN_MULTIPLIE==0) {return true;}
+		if (total%10==0) {return true;}
 		else {return false;}
 	}
 }
