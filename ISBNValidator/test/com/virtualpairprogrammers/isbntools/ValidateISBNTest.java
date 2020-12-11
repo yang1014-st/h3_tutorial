@@ -17,6 +17,7 @@ public class ValidateISBNTest {
 		
 	}
 	
+	
 	@Test
 	public void ISBNNumberEndingInAnXAreValid() {
 		ValidateISBN validator = new ValidateISBN();
@@ -25,6 +26,10 @@ public class ValidateISBNTest {
 		
 	}
 	
+	@Test
+	public void checkAValidate13ISBN() {
+		fail();
+	}
 	
 	@Test
 	public void checkAnInvalidISBN() {
